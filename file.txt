@@ -1,0 +1,35 @@
+1. admin
+    -thiet ket database for
+    -phat trien quan ly danh muc
+    -phat trien quan ly san pham
+2. frontend
+    -home
+    -danh muc san pham
+    -chi tiet san pham
+3. toi uu giao dien (ui & ux)
+===========================================
+phat trien phan 1.admin
+_table category
+create table category{
+    id int primary key auto_increment,
+    name varchar(50) not null,
+    created_at datetime,
+    updated_at datetime
+}
+//table product
+create table product{
+    id int primary key auto_increment,
+    title varchar(200) not null,
+    price float,
+    thumbnail varchar(500),
+    content longtext,
+    id_category int references category (id),
+    created_at datetime,
+    updated_at datetime
+}
+phat trien chuc nang cua admin
+_Quan ly danh muc
+    _Hien thi danh sach
+    _Them, Sua, Xoa
+_Quản lý sản phẩm
+    _Hien thi danh sach san pham
